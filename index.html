@@ -31,7 +31,9 @@
 
       <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
         <a href="#project">Project</a>
+        <a href="#case-study">Case study</a>
         <a href="#skills">Skills</a>
+        <a href="#learning">Learning</a>
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -50,6 +52,7 @@
 
           <div class="hero-actions" aria-label="Portfolio actions">
             <a class="button primary" href="#project">View flagship project</a>
+            <a class="button secondary" href="https://github.com/Smepa1223" target="_blank" rel="noreferrer">GitHub</a>
             <a class="button secondary" href="mailto:smeetp004@gmail.com">Email me</a>
           </div>
 
@@ -141,6 +144,71 @@
         </div>
       </section>
 
+      <section class="section case-study-section" id="case-study">
+        <div class="section-heading">
+          <p class="eyebrow">Project case study</p>
+          <h2>Built like a real internal tool, not just a tutorial app.</h2>
+          <p>
+            The Service Request Tracker is designed around the kind of workflow a support, facilities, or operations team
+            would use every day: intake a request, assign responsibility, communicate progress, and close it cleanly.
+          </p>
+        </div>
+
+        <div class="case-grid">
+          <article class="case-card">
+            <span class="case-number">01</span>
+            <h3>Problem</h3>
+            <p>
+              Teams need a reliable way to track requests without losing context across emails, verbal updates, or
+              disconnected notes.
+            </p>
+          </article>
+          <article class="case-card">
+            <span class="case-number">02</span>
+            <h3>Backend approach</h3>
+            <p>
+              I modeled the main ticket workflow through REST API endpoints, relational data, status changes, comments,
+              assignment, validation, and API documentation.
+            </p>
+          </article>
+          <article class="case-card">
+            <span class="case-number">03</span>
+            <h3>Frontend approach</h3>
+            <p>
+              I built protected React views with reusable TypeScript components, practical forms, ticket lists, detail
+              views, and search/filter interactions.
+            </p>
+          </article>
+          <article class="case-card">
+            <span class="case-number">04</span>
+            <h3>Engineering habits</h3>
+            <p>
+              I documented setup steps, API usage, test commands, troubleshooting notes, and project structure so the
+              application is easier to run and review.
+            </p>
+          </article>
+        </div>
+
+        <div class="architecture-panel">
+          <div>
+            <p class="eyebrow">System shape</p>
+            <h3>React client, ASP.NET Core API, SQL Server persistence.</h3>
+            <p>
+              The project separates the user interface from backend logic, keeps database access behind Entity Framework
+              Core models, and exposes documented API routes for the main ticket workflows.
+            </p>
+          </div>
+
+          <div class="flow" aria-label="Project architecture flow">
+            <span>React + TypeScript</span>
+            <span>ASP.NET Core Web API</span>
+            <span>Entity Framework Core</span>
+            <span>SQL Server</span>
+            <span>Docker + Swagger</span>
+          </div>
+        </div>
+      </section>
+
       <section class="section skills-section" id="skills">
         <div class="section-heading">
           <p class="eyebrow">Technical skills</p>
@@ -163,6 +231,28 @@
           <article>
             <h3>Web maintenance</h3>
             <p>Basic WordPress familiarity, page updates, content edits, themes, plugins, and site maintenance.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section learning-section" id="learning">
+        <div class="section-heading">
+          <p class="eyebrow">Currently improving</p>
+          <h2>Next areas I am strengthening for production backend work.</h2>
+        </div>
+
+        <div class="learning-list">
+          <article>
+            <h3>Testing</h3>
+            <p>Unit tests, integration tests, API workflow tests, and clearer test documentation.</p>
+          </article>
+          <article>
+            <h3>Authentication & authorization</h3>
+            <p>Role-based access, protected API endpoints, user sessions, and secure application flows.</p>
+          </article>
+          <article>
+            <h3>Deployment</h3>
+            <p>Cloud hosting, environment configuration, CI/CD basics, and production-ready setup notes.</p>
           </article>
         </div>
       </section>

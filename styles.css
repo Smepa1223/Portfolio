@@ -234,6 +234,9 @@ h3 {
 .hero-stats div,
 .intro-grid article,
 .skills-grid article,
+.case-card,
+.architecture-panel,
+.learning-list article,
 .project-case,
 .stack-panel {
   border: 1px solid var(--line);
@@ -289,7 +292,9 @@ dd {
 }
 
 .intro-grid,
-.skills-grid {
+.skills-grid,
+.case-grid,
+.learning-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
@@ -300,12 +305,17 @@ dd {
 }
 
 .intro-grid article,
-.skills-grid article {
+.skills-grid article,
+.case-card,
+.learning-list article {
   padding: 1.25rem;
 }
 
 .intro-grid p,
 .skills-grid p,
+.case-card p,
+.architecture-panel p,
+.learning-list p,
 .timeline p,
 .project-case p,
 .contact-section p {
@@ -390,6 +400,83 @@ dd {
   font-weight: 800;
 }
 
+.case-study-section {
+  background: linear-gradient(180deg, #eef4f1 0%, var(--surface) 100%);
+}
+
+.case-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.case-card {
+  min-height: 230px;
+}
+
+.case-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 32px;
+  margin-bottom: 1.1rem;
+  border-radius: 6px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.architecture-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(280px, 1.2fr);
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 1rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: var(--paper);
+}
+
+.architecture-panel h3 {
+  max-width: 560px;
+  font-size: clamp(1.35rem, 2vw, 2rem);
+}
+
+.flow {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.flow span {
+  position: relative;
+  display: grid;
+  min-height: 92px;
+  place-items: center;
+  padding: 0.8rem;
+  border: 1px solid rgba(15, 118, 110, 0.22);
+  border-radius: 8px;
+  background: rgba(15, 118, 110, 0.08);
+  color: var(--accent-dark);
+  font-size: 0.85rem;
+  font-weight: 800;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.flow span:not(:last-child)::after {
+  position: absolute;
+  right: -0.47rem;
+  z-index: 1;
+  color: var(--signal);
+  content: ">";
+  font-weight: 800;
+}
+
+.learning-section {
+  background: var(--paper);
+  border-block: 1px solid var(--line);
+}
+
 .timeline {
   display: grid;
   gap: 1rem;
@@ -453,6 +540,7 @@ dd {
 @media (max-width: 980px) {
   .hero,
   .project-layout,
+  .architecture-panel,
   .contact-section {
     grid-template-columns: 1fr;
   }
@@ -462,8 +550,24 @@ dd {
   }
 
   .skills-grid,
-  .intro-grid {
+  .intro-grid,
+  .case-grid,
+  .learning-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .flow {
+    grid-template-columns: 1fr;
+  }
+
+  .flow span {
+    min-height: 64px;
+  }
+
+  .flow span:not(:last-child)::after {
+    right: auto;
+    bottom: -1.2rem;
+    transform: rotate(90deg);
   }
 
   .contact-actions {
@@ -515,6 +619,8 @@ dd {
   .hero-stats,
   .skills-grid,
   .intro-grid,
+  .case-grid,
+  .learning-list,
   .timeline-item {
     grid-template-columns: 1fr;
   }
