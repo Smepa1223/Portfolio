@@ -4,6 +4,10 @@ Personal portfolio website for backend and full-stack developer roles.
 
 The site highlights my Service Request Tracker project, technical skills, education, work experience, and contact links.
 
+## Live Portfolio
+
+https://smepa1223.github.io/Portfolio/
+
 ## Tech Stack
 
 - HTML
@@ -16,14 +20,6 @@ The site highlights my Service Request Tracker project, technical skills, educat
 **Service Request Tracker** is a full-stack web application built with React, TypeScript, ASP.NET Core Web API, SQL Server, Entity Framework Core, Docker, and Swagger.
 
 It includes ticket creation, assignment, comments, status updates, search and filtering, protected routes, API documentation, and setup notes.
-
-## Run Locally
-
-Open `index.html` in a browser, or run:
-
-```bash
-open index.html
-```
 
 ## Contact
 
